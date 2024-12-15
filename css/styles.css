@@ -1,0 +1,52 @@
+
+#particle-background {
+  position: absolute;
+  z-index: -1;
+}
+
+.darktheme {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+.darktheme .card {
+  background-color: #1f1f1f;
+  color: white;
+  border: none;
+  transition:  transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.darktheme .card-hover:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); 
+}
+
+.darktheme .card-subtitle {
+  color: #6c757d;
+}
+
+.navbar {
+  background: linear-gradient(to bottom, #1f1f1f, transparent); 
+}
+
+.expandable-section {
+  display: none;
+  overflow: hidden;
+}
+
+.card-hover:hover .expandable-section,
+.card-hover:focus-within .expandable-section {
+    display: block;
+    animation: slideDown 3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+      max-height: 0;
+      opacity: 0;
+  }
+  to {
+      max-height: 1500px;
+      opacity: 1;
+  }
+}
